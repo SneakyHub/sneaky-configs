@@ -140,7 +140,7 @@ echo "Creating SSL for panel.sneakydev.xyz!"
 cd /root/.acme.sh/
 ./acme.sh --issue --dns dns_cf -d "panel.sneakydev.xyz" \
 --key-file /etc/letsencrypt/live/panel.sneakydev.xyz/privkey.pem \
---fullchain-file /etc/letsencrypt/live/panel.sneakydev.xyz/fullchain.pem 
+--fullchain-file /etc/letsencrypt/live/panel.sneakydev.xyz/fullchain.pem --force
 echo ""
 echo "Done!"
 echo ""
