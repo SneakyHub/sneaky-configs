@@ -29,8 +29,7 @@ echo "Installing Composer"
 sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 echo "Done!"
 echo "Setting up MySQL - Grab a long random password"
-echo "waiting 30 seconds so you can get ready!"
-sleep 30
+read -p "Press enter to continue with MariaDB installation - Make sure you have the password!"
 sudo mysql_secure_installation
 echo "good job, now lets enable php fpm"
 sudo systemctl enable php8.0-fpm
