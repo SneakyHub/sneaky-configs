@@ -126,8 +126,34 @@ sudo systemctl enable --now pteroq.service
 echo ""
 echo "Done!"
 echo ""
+
+
+echo "Downloading Custom Web Server .conf for SneakyHub & Removing default"
+cd /etc/nginx/sites-enabled
+rm default
+wget -O panel.sneakydev.xyz.conf https://raw.githubusercontent.com/SneakyHub/sneaky-configs/main/panel.sneakydev.xyz.conf
+echo ""
+echo "Done!"
+echo ""
+
+echo "Creating SSL for panel.sneakydev.xyz!"
+cd /root/.acme.sh/
+./acme.sh --issue --dns dns_cf -d "panel.sneakydev.xyz" \
+--key-file /etc/letsencrypt/live/panel.sneakydev.xyz/privkey.pem \
+--fullchain-file /etc/letsencrypt/live/panel.sneakydev.xyz/fullchain.pem 
+echo ""
+echo "Done!"
+echo ""
+
+echo ""
+echo "Changing back to main pterodactyl directory!"
+echo ""
+cd /var/www/pterodactyl
+echo ""
+echo "Done!"
 echo ""
 echo ""
+echo "Please complete the following tasks to complete the rest of the panel!"
 echo ""
 echo ""
 echo "you need to setup the following... "
