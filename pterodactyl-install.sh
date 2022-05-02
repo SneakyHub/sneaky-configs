@@ -144,7 +144,12 @@ cd /root/.acme.sh/
 echo ""
 echo "Done!"
 echo ""
-
+echo "Restarting Nginx (may throw an error)"
+sudo systemctl restart nginx
+echo ""
+echo "Done!"
+echo ""
+echo ""
 echo ""
 echo "Changing back to main pterodactyl directory!"
 echo ""
