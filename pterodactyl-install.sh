@@ -30,7 +30,7 @@ sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/loca
 echo "Done!"
 echo "Setting up MySQL - Grab a long random password"
 echo "waiting 30 seconds so you can get ready!"
-wait 30
+sleep 30
 sudo mysql_secure_installation
 echo "good job, now lets enable php fpm"
 sudo systemctl enable php8.0-fpm
