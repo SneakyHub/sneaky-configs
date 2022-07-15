@@ -1,0 +1,7 @@
+{
+    "user": "sneakyhub-database-username", // you will get this info from the database tab on https://panel.sneakyhub.com/
+    "password": "", // you will get this info from the database tab on https://panel.sneakyhub.com/
+    "host": "fi1.sneakyhub.com", // change fi1 to whatever node you are on
+    "port": "3306", // leave this alone
+    "database": "vrp" // you will get this info from the database tab on https://panel.sneakyhub.com/
+}
